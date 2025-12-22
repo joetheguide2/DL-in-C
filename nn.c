@@ -6,11 +6,16 @@
 int main(void){
   Mat m = mat_alloc(2, 2);
   Mat m2 = mat_alloc(2, 2);
-  mat_rand(m , 0, 1);
-  mat_rand(m2, 0, 10);
-  mat_print(m);
-  mat_print(m2);
+  Mat m3 = mat_alloc(2, 2);
+
+ 
+  mat_fill(m , 2);
+  mat_fill(m2, 1);
   mat_sum(m , m2);
-  mat_print(m);
+  MAT_PRINT(m);
+
+  mat_dot(m3, m2, m);
   return 0;
+ 
+  
 }
